@@ -10,7 +10,7 @@ Usage:
 
 Creating New Shortened URL:
 
-    shortURL-ms.heroku.com/http://www.weather.com
+    shorturl-ms.heroku.com/http://www.weather.com
     
 JSON Response:
 
@@ -18,7 +18,7 @@ JSON Response:
     
 Passing Shortened URL:
 
-    shortURL-ms.heroku.com/k1mc5FN
+    shorturl-ms.heroku.com/k1mc5FN
     
 Redirects to:
     http://www.weather.com
