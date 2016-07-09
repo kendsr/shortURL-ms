@@ -70,7 +70,7 @@ function findOrCreateShortURL (url, res){
 				var obj = { "longURL":url};
 				Site.create(obj, function(err, newsite){
 					if (err){ console.log(err); res.redirect("/");}
-					res.json({"shortURL":newsite.shortURL, "longURL":url});
+					res.json({"shortURL":appURL+newsite.shortURL, "longURL":url});
 				});
 			}
 		});
