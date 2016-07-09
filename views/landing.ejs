@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+	<title><%= title %></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<h1>URL Shortener Microservice</h1>
+		<h3>Features</h3>
+		<div class="well">
+			<ul>
+			    <li>Pass a URL as a parameter and receive a shortened URL in the JSON response</li>
+			    <li>Visit the shortened URL and be redirected to the original.</li>
+			    <li>Passing an invalid URL will return an error in the JSON response</li>
+			</ul>
+		</div>
+		<h3>Usage</h3>
+		<div class="well">
+			<h4>Creating New Shortened URL:
+			<p>shortURL-ms.heroku.com/http://www.weather.com</p></h4>
+			<h4>JSON Response:
+			<p>{"shortURL": "k1mc5FN",
+  				"longURL": "http://www.weather.com"}</p></h4>
+  			<h4>Passing Shortened URL:
+  				<p>shortURL-ms.heroku.com/k1mc5FN</p></h4>
+  			<h4>Redirects to:
+  				<p> http://www.weather.com</p>
+  			</h4>
+		</div>
+		  <footer>
+		  	<p>&copy; 2016 Ken Dulin - a FreeCodeCamp Back-end API project</p>
+          </footer>
+	</div>
+
+</body>
+</html>
