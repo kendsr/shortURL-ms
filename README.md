@@ -25,15 +25,15 @@ Redirects to:
 
 Install:
 
-NodeJS required
+    NodeJS required
 
-Momgodb required
+    Mongodb required
 
-Clone or download repository to a directory then run "npm install"
+    Clone or download repository to a directory then run "npm install"
 
         Installs express, ejs, mongoose, mongoose-shortid-nodeps and valid-url
 
-If not running locally two environment variables are required:
+    If not running locally two environment variables are required:
 
         APPURL      = The Url for your application
         
