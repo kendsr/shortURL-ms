@@ -11,6 +11,7 @@ var express = require("express"),
 
 // Set template enjine
 app.set("view engine", "ejs");
+app.use(express.static(__dirname + "/public"));
 
 // Sites Model
 var SiteSchema = new mongoose.Schema({
@@ -25,7 +26,20 @@ mongoose.connect(dbURL);
 // Landing Page 
 app.get("/", function(req, res){
 	res.render("landing", {title:title});
-})
+});
+
+app.get("/listall", function(req, res){
+
+	Site.find({},{shortURL:1, longURL:1, _id:0},
+		function(err, sites) {
+			if (err){ console.log(err);}
+			// Prepend appURL to shortURL
+			for (var i=0; i<sites.length; i++){
+				sites[i].shortURL = appURL+sites[i].shortURL;
+			}
+			res.json(sites);
+		});
+});
 
 // Find short URL and redirect to long URl or 
 // if long URl, validate it and create a short URL

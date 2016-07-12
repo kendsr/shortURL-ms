@@ -3,6 +3,9 @@
 <head>
 	<title><%= title %></title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/landing.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+	
 </head>
 <body>
 	<div class="container">
@@ -28,9 +31,15 @@
   				<p> http://www.weather.com</p>
   			</h4>
 		</div>
-		  <footer>
-		  	<p>&copy; 2016 Ken Dulin - a FreeCodeCamp Back-end API project</p>
-          </footer>
+		<button id="getAllSites" class="btn btn-primary btn-lg btn-block">
+			Click to see all saved sites
+		</button>
+		<div id="allsites" class="container-fluid"></div>
+	    <footer class="text-center">
+	  		<p>&copy; 2016 Ken Dulin - a FreeCodeCamp Back-end API project</p>
+        </footer>
+        <!-- Scripts -->
+    	<script src="/js/landing.js"></script>
 	</div>
 
 </body>
